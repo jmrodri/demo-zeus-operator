@@ -1,0 +1,48 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: demo-zeus-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Test is the Schema for the tests API
+      displayName: Test
+      kind: Test
+      name: tests.test.zeusville.com
+      version: v1
+  description: description zeus
+  displayName: 'Display name for the operator: zeus'
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - keywords
+  - zeus
+  links:
+  - name: Demo Zeus Operator
+    url: https://demo-zeus-operator.domain
+  maintainers:
+  - email: jmrodri@nc.rr.com
+    name: zeus
+  maturity: alpha
+  provider:
+    name: provider zeus
+  version: 0.0.0
